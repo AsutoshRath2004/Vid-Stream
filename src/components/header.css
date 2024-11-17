@@ -1,0 +1,12 @@
+/* src/components/Header.css */
+.header {
+  padding: 20px;
+  background-color: #1a1a1a; /* Darker background */
+  color: white;
+  
+}
+
+.header h2 {
+  
+  font-size: 28px;
+}

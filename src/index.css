@@ -1,0 +1,346 @@
+/* Global Styles */
+body {
+  background-color: #181818; /* Dark background */
+  color: #FFFFFF; /* White text */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header and Navbar Styles */
+.header {
+  background-color: #202020; /* Darker background for header */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  color: #FF0000; /* YouTube red for branding */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow navbar to take full width */
+}
+
+.navbar .search-box {
+  display: flex;
+}
+
+.navbar input[type="text"] {
+  padding: 10px 15px; /* Increased padding */
+  border: none;
+  border-radius: 30px; /* More rounded edges */
+  background-color: #333;
+  color: white;
+  width: 400px; /* Set width for the search box */
+  transition: background-color 0.2s;
+}
+
+.navbar input[type="text"]:focus {
+  outline: none; /* Remove outline on focus */
+  background-color: #444; /* Darker background on focus */
+}
+
+.navbar .buttons {
+  display: flex;
+  align-items: center;
+}
+
+.navbar button {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #FF0000; /* YouTube red */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.navbar button:hover {
+  background-color: #CC0000; /* Darker red on hover */
+}
+
+/* Bell Button Styles */
+.notification-button {
+  background-color: rgb(255, 255, 255); /* White background for the bell button */
+  border: none;
+  border-radius: 50%; /* Rounded shape */
+  width: 40px; /* Set width for the bell button */
+  height: 40px; /* Set height for the bell button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.notification-button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* src/components/video */
+
+.video {
+  background-color: #1e1e1e; /* Dark background for video item */
+  color: #ffffff; /* White text color for better contrast */
+  border: 1px solid #333; /* Darker border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures child elements don't overflow */
+  transition: transform 0.2s; /* Smooth scaling effect */
+  cursor: pointer; /* Pointer cursor to indicate clickable area */
+}
+
+.video:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.video-thumbnail {
+  width: 100%; /* Full width for the thumbnail */
+  border-bottom: 1px solid #333; /* Border between thumbnail and title */
+}
+
+.video-title {
+  font-size: 1rem; /* Font size for the video title */
+  margin: 8px; /* Margin for spacing around title */
+  padding: 0; /* Reset padding */
+  text-align: center; /* Center align title */
+}
+
+.video-stats {
+  font-size: 0.9rem; /* Font size for stats */
+  margin: 8px; /* Margin for spacing */
+  color: #ccc; /* Lighter color for stats text */
+  display: flex; /* Flexbox layout for stats */
+  justify-content: space-between; /* Space between stats */
+}
+
+.video-stat {
+  margin: 0; /* Reset margin for stats */
+}
+
+
+
+/* src/components/VideoList*/
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Add spacing between video cards */
+  padding: 20px; /* Add padding around the grid */
+}
+
+.video-list .video-item {
+  background-color: #202020;
+  padding: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.video-list .video-item:hover {
+  transform: scale(1.05); /* Slight hover effect */
+}
+
+.video-thumbnail {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.video-title {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.video-stats {
+  font-size: 12px;
+  color: #aaa;
+}
+
+
+/* Video Detail Styles */
+/* src/pages/VideoDetail */
+.video-detail {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto; /* Center the content */
+  font-family: Arial, sans-serif; /* Use a clean font */
+}
+
+h2 {
+  font-size: 24px; /* Adjusted font size for the title */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+.video-player {
+  margin-bottom: 20px; /* Space below the video player */
+}
+
+.video-stats {
+  font-size: 14px; /* Smaller font for stats */
+  margin-bottom: 10px; /* Space below the stats */
+}
+
+.description-box {
+  background-color: #161515; /* Light background for description */
+  padding: 10px; /* Padding inside the description box */
+  border-radius: 4px; /* Rounded corners */
+  margin-bottom: 20px; /* Space below the description box */
+  font-size: 14px; /* Smaller font size for description */
+}
+
+.description-box .more {
+  color: blue; /* Color for the "More" toggle link */
+  cursor: pointer; /* Cursor indicates clickable */
+  text-decoration: underline; /* Underline the text */
+}
+
+.video-actions {
+  margin-bottom: 20px; /* Space below the action buttons */
+}
+
+.button {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  padding: 10px 15px; /* Padding inside buttons */
+  margin-right: 10px; /* Space between buttons */
+  border-radius: 4px; /* Rounded corners for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.comment-section {
+  margin-top: 20px; /* Space above the comments section */
+}
+
+.comment-section h3 {
+  margin-bottom: 10px; /* Space below the comments title */
+}
+
+.comment-section form {
+  display: flex; /* Flex layout for input and button */
+  margin-bottom: 20px; /* Space below the form */
+}
+
+.comment-section input {
+  flex: 1; /* Take up available space */
+  padding: 10px; /* Padding inside input */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  margin-right: 10px; /* Space between input and button */
+}
+
+.comment-section button {
+  padding: 10px; /* Padding inside the submit button */
+  background-color: #28a745; /* Green color for submit */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.comment-section button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Comment style */
+.comment {
+  background-color: #000000; /* Light gray for comments */
+  padding: 10px; /* Padding inside comment */
+  margin-bottom: 10px; /* Space between comments */
+  border-radius: 4px; /* Rounded corners */
+}
+
+
+/* Home */
+
+body {
+  background-color: #121212; /* Dark background for the entire page */
+  color: #ffffff; /* Light text color */
+  font-family: Arial, sans-serif; /* Font style for the body */
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+  gap: 16px; /* Space between video items */
+  padding: 16px; /* Padding around the grid */
+}
+
+.video {
+  background-color: #1e1e1e; /* Dark background for video item */
+  border: 1px solid #333; /* Darker border for video item */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures child elements don't overflow */
+  transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.video:hover {
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.video img {
+  width: 100%; /* Full width for the thumbnail */
+  border-bottom: 1px solid #333; /* Border between thumbnail and title */
+}
+
+.video h3 {
+  font-size: 1rem; /* Smaller font size for the video title */
+  margin: 8px; /* Margin for spacing around title */
+  padding: 0; /* Reset padding */
+  color: #ffffff; /* White color for video title */
+}
+
+.spinner {
+  display: flex;
+  justify-content: center; /* Center the spinner */
+  align-items: center; /* Align vertically */
+  margin: 20px 0; /* Margin around spinner */
+}
+
+.error-message {
+  color: #ff4d4d; /* Red color for error messages */
+  text-align: center; /* Center the error message */
+  margin: 20px 0; /* Margin around error message */
+}
+
+.loading-more {
+  text-align: center; /* Center the loading message */
+  margin: 20px 0; /* Margin around loading message */
+  font-size: 1.2rem; /* Slightly larger font for visibility */
+  color: #ffffff; /* White color for loading message */
+}
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .header input {
+    width: 100%; /* Full width on mobile */
+    margin-top: 10px; /* Margin for spacing */
+  }
+
+  .navbar {
+    flex-direction: column; /* Stack navbar items */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .video-detail iframe {
+    height: 300px; /* Smaller video player on mobile */
+  }
+
+  .navbar .search-box {
+    width: 100%; /* Full width for search box on mobile */
+  }
+}
