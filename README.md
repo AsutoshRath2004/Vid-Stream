@@ -16,10 +16,6 @@ A modern **Video Streaming Platform** inspired by YouTube, built with cutting-ed
 - **Firebase Realtime Database** to store and manage user information.
 - Tracks user activity for a personalized experience.
 
-### Responsive Design:
-- Fully optimized for mobile, tablet, and desktop devices.
-- Ensures a consistent user experience across all platforms.
-
 ---
 
 ## 🛠️ Tech Stack
